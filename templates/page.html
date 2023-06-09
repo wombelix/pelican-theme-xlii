@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ page.lang }}{% endblock %}
+
+{% block title %}{{ SITENAME }} - {{ page.title|striptags }}{%endblock%}
+
+{% block head %}
+  {{ super() }}
+
+  {% import 'translations.html' as translations with context %}
+  {% if translations.entry_hreflang(page) %}
+    {{ translations.entry_hreflang(page) }}
+  {% endif %}
+  
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+  {% endif %}
+  
+{% endblock %}
+
+{% block content %}
+  <header>
+    <h2 class="entry-title">
+      <a href="{{ SITEURL }}/{{ page.url }}" rel="bookmark"
+         title="Permalink to {{ page.title|striptags }}">{{ page.title }}</a></h2>
+	<p>
+	{% if page.date %}
+	Published: <time class="published" datetime="{{ page.date.isoformat() }}">{{ page.locale_date }}</time> 
+	{% endif %}
+    {% if page.modified and page.locale_modified != page.locale_date %}
+    | Modified: <time class="modified" datetime="{{ page.modified.isoformat() }}">{{ page.locale_modified }}</time>
+    {% endif %}
+	{% import 'translations.html' as translations with context %}
+	{{ translations.translations_for(page) }} 
+	</p>
+  </header>
+
+  
+  <div class="entry-content">
+    {{ page.content }}
+  </div>
+
+  <footer class="post-info">
+  </footer>
+  {% if '404' not in output_file %}
+  <div class="showsource">
+  [ <a href="{{ SITEURL }}/{{ output_file | replace('.html', '.rst') }}">Show Source</a> | 
+  <a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">Download PDF</a> ]
+  </div>
+  {% endif %}
+
+{% endblock %}

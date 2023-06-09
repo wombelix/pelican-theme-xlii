@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} - {{ period | reverse | join(' ') }} Posts{% endblock %}
+
+{% block content %}
+<h2 id="posts_title">Posts: {{ period | reverse | join(' ') }}</a></h2>
+
+{% if period[0] is defined %}{% set current_year = period[0] | string %}{% endif %}
+{% if period[1] is defined %}{% set current_month = period[1] | strptime('%B', '%b') %}{% endif %}
+&gt; <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}/">posts</a> &gt;
+{% for val in period %}
+{% if loop.index == 1 %} <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}/{{ current_year }}/">{{ current_year }}</a> &gt;{% endif %}
+{% if loop.index == 2 %} <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}/{{ current_year }}/{{ current_month }}/">{{ current_month }}</a>{% endif %}
+{% endfor %}
+<dl>
+{% for article in dates %}
+    <dt>{{ article.locale_date }}</dt>
+    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+{% endfor %}
+</dl>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ article.lang }}{% endblock %}
+
+{% block title %}{{ SITENAME }} - {{ article.title|striptags  }}{% endblock %}
+
+{% block head %}
+  {{ super() }}
+
+  {% import 'translations.html' as translations with context %}
+  {% if translations.entry_hreflang(article) %}
+    {{ translations.entry_hreflang(article) }}
+  {% endif %}
+
+  {% if article.description %}
+    <meta name="description" content="{{ article.description }}" />
+  {% endif %}
+
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{ tag }}" />
+  {% endfor %}
+
+{% endblock %}
+
+{% block content %}
+  <header>
+    <h2 class="entry-title">
+      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+
+  {% set current_year = article.date|strftime('%Y') %}
+  {% set current_month = article.date|strftime('%b') %}
+  &gt; <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}/">posts</a> &gt; 
+  <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}/{{ current_year }}">{{ current_year }}</a> &gt; 
+  <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}/{{ current_year }}/{{ current_month }}">{{ current_month }}</a> 
+  <!--<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a> -->
+	<p>
+	Published: <time class="published" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time> 
+    {% if article.modified and article.locale_modified != article.locale_date %}
+    | Modified: <time class="modified" datetime="{{ article.modified.isoformat() }}">{{ article.locale_modified }}</time>
+    {% endif %}
+	{% import 'translations.html' as translations with context %}
+	{{ translations.translations_for(article) }} 
+	</p>
+  </header>
+
+  <div class="entry-content">
+    {{ article.content }}
+  </div>
+
+  <footer class="post-info">
+    {% if article.tags %}
+    <!-- <div class="tags"> -->
+        Tags:
+        {% for tag in article.tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>, 
+        {% endfor %} | 
+    <!-- </div> -->
+    {% endif %}
+    {% if article.category %}
+    <!-- <div class="category"> -->
+        Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> | 
+    <!-- </div> -->
+    {% endif %}
+    {% if article.authors %}
+    <address class="vcard author">Author: {% for author in article.authors %}
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+        {% endfor %}
+    </address>
+    {% elif article.author %}
+    <address class="vcard author">Author: <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a></address>
+    {% endif %}
+  </footer>
+  
+  <div class="showsource">
+  [ <a href="{{ SITEURL }}/{{ output_file | replace('.html', '.rst') }}">Show Source</a> | 
+  <a href="{{ SITEURL }}/pdf/{{ article.slug }}.pdf">Download PDF</a> ]
+  </div>
+
+{% endblock %}
