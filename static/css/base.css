@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+@import url("pygment.css");
+
+/*
+Contrast (Req Ratio = 4.5:1)
+--------
+#FFB000 (Amber)
+#282828 (Black'ish)
+Contrast Ratio 8.04:1
+
+#FFCC00 (Lt. Amber)
+#282828 (Black'ish)
+Contrast Ratio 9.75:1
+
+#33FF00 (Green 1)
+#282828 (Black'ish)
+Contrast Ratio 10.84:1
+
+#00FF33 (Green 2)
+rgb(0, 0, 0) (Black'ish)
+Contrast Ratio 10.77:1
+
+#00FF66 (Green 3)
+#282828 (Black'ish)
+Contrast Ratio 10.87:1
+
+#FFFF54 (Yellow)
+#282828 (Black'ish)
+Contrast Ratio 13.81:1
+
+#CFCFCF (White'ish)
+#282828 (Black'ish)
+Contrast Ratio 9.46:1
+
+#CFCFCF (White'ish)
+#010101 (Black)
+Contrast Ratio 13.39:1
+*/
+
+:root {
+	--green1: #33FF00;
+	--green2: #00FF33;
+	--green3: #00FF66;
+	--black1: #282828;
+	--black2: #010101;
+	--yellow1: #FFFF54;
+	--amber1: #FFB000;
+	--amber2: #FFCC00;
+	--white1: #CFCFCF;
+}
+
+body {
+    background-color: var(--black1);
+    color: var(--green1);
+    font-family: monospace;
+    font-size: 1.2em;
+    padding: 1em;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+h1 {
+	font-family: "Courier New";
+	color: var(--white1);
+}
+
+h2, h3, h4, h5 {
+	color: var(--white1);
+}
+
+h2 a, h3 a, h4 a, h5 a {
+	color: var(--amber1);
+}
+
+a {
+    text-decoration: none;
+    color: var(--amber1);
+    word-wrap: break-word;
+}
+
+time.published {
+    color: var(--yellow1);
+}
+
+/* Article */
+article {
+    border-style: solid;
+    border-color: var(--white1);
+	margin-bottom: 1em;
+}
+
+article header .entry-title {
+	border-bottom-style: solid;
+	border-color: var(--white1);
+	padding-left: 0.25em;
+}
+
+article header .entry-title a {
+	color: var(--amber1);
+}
+
+article .entry-content {
+	padding: 0.25em;
+	margin: 0;
+}
+
+article footer {
+    padding: 0.25em;
+    text-align: right;
+}
+
+/* Navigation */
+#menu ul, #catmenu ul, #links ul {
+	margin: 0;
+	margin-bottom: 1em;
+	padding: 0.25em;
+	background-color: var(--green1);
+}
+
+#menu li, #catmenu li, #links li {
+	display: inline;
+    font-weight: bold;
+    color: var(--black1);
+}
+
+#menu li a:hover, #catmenu li a:hover, #menu .active a, #catmenu .active a, #links li a:hover {
+	background-color: var(--black1);
+	color: var(--green1);
+}
+
+#menu li a, #catmenu li a, #catmenu, #catmenu a, #links li a, #links {
+	color: var(--black1);
+}
+
+#menu li:before, #links li:before {
+    content: "| ";
+}
+
+#menu li:first-child:before, #links li:first-child:before {
+    content: "[ ";
+}
+
+#menu li:last-child:after, #links li:last-child:after {
+    content: " ]";
+}
+
+#catmenu li:after {
+    content: ",";
+}
+
+#catmenu li:last-child:after {
+    content: "";
+}
+
+/* Show Source */
+div.showsource {
+	padding-bottom: 0.25em;
+	margin-bottom: 1em;
+}
+
+/* Code Highlighting */
+.highlight, .highlight .go, div.entry-content code, pre.literal-block {
+	background-color: var(--black2);
+	color: var(--white1);
+	overflow: auto;
+}
+
+.highlight pre {
+	padding: 0.5em;
+}
+
+pre.literal-block {
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+/* Text Alignments */
+#banner, #menu, #content, #contentinfo, #catmenu, #path, #content h1 {
+	text-align: left;
+	margin: 0px auto; 
+}
+
+#banner, #contentinfo, #menu {
+	text-align: center;
+}
+
+#path, #content div.showsource {
+	text-align: right;
+}
+
+/* Notes */
+div.topic {
+	border-style: solid;
+	border-color: var(--amber2);	
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+div.topic p.topic-title {
+	border-bottom-style: solid;
+	border-color: var(--amber2);
+	padding-bottom: 1em;
+}
+
+/* Misc */
+section#content.body footer.post-info {
+	border-top-style: solid;
+	border-color: var(--white1);
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: justify;
+
+}
+
+footer.post-info address {
+	display: unset;
+}
+
+div.translation {
+	border-bottom-style: solid;
+	border-color: var(--white1);
+}
+
+header .entry-title {
+    margin: 0;
+}
+
+#posts_title {
+  margin: 0;
+	color: var(--amber1);
+}
+
+#post-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+

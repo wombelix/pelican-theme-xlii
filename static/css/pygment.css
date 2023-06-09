@@ -1,0 +1,205 @@
+.pygments-hll {
+background-color:#eee;
+}
+.pygments-c {
+color:#408090;
+font-style:italic;
+}
+.pygments-err {
+border:1px solid #FF0000;
+}
+.pygments-k {
+color:#007020;
+font-weight:bold;
+}
+.pygments-o {
+color:#666666;
+}
+.pygments-cm {
+color:#408090;
+font-style:italic;
+}
+.pygments-cp {
+color:#007020;
+}
+.pygments-c1 {
+color:#408090;
+font-style:italic;
+}
+.pygments-cs {
+background-color:#FFF0F0;
+color:#408090;
+}
+.pygments-gd {
+color:#A00000;
+}
+.pygments-ge {
+font-style:italic;
+}
+.pygments-gr {
+color:#FF0000;
+}
+.pygments-gh {
+color:#004a80; /* #000080 */
+font-weight:bold;
+}
+.pygments-gi {
+color:#00A000;
+}
+.pygments-go {
+color:#303030;
+}
+.pygments-gp {
+color:#C65D09;
+font-weight:bold;
+}
+.pygments-gs {
+font-weight:bold;
+}
+.pygments-gu {
+color:#800080;
+font-weight:bold;
+}
+.pygments-gt {
+color:#0040D0;
+}
+.pygments-kc {
+color:#007020;
+font-weight:bold;
+}
+.pygments-kd {
+color:#007020;
+font-weight:bold;
+}
+.pygments-kn {
+color:#007020;
+font-weight:bold;
+}
+.pygments-kp {
+color:#007020;
+}
+.pygments-kr {
+color:#007020;
+font-weight:bold;
+}
+.pygments-kt {
+color:#902000;
+}
+.pygments-m {
+color:#208050;
+}
+.pygments-s {
+color:#4070A0;
+}
+.pygments-na {
+color:#4070A0;
+}
+.pygments-nb {
+color:#007020;
+}
+.pygments-nc {
+color:#0E84B5;
+font-weight:bold;
+}
+.pygments-no {
+color:#60ADD5;
+}
+.pygments-nd {
+color:#555555;
+font-weight:bold;
+}
+.pygments-ni {
+color:#D55537;
+font-weight:bold;
+}
+.pygments-ne {
+color:#007020;
+}
+.pygments-nf {
+color:#06287E;
+}
+.pygments-nl {
+color:#002070;
+font-weight:bold;
+}
+.pygments-nn {
+color:#0E84B5;
+font-weight:bold;
+}
+.pygments-nt {
+color:#066373; /* #062873 */
+font-weight:bold;
+}
+.pygments-nv {
+color:#BB60D5;
+}
+.pygments-ow {
+color:#007020;
+font-weight:bold;
+}
+.pygments-w {
+color:#BBBBBB;
+}
+.pygments-mf {
+color:#208050;
+}
+.pygments-mh {
+color:#208050;
+}
+.pygments-mi {
+color:#208050;
+}
+.pygments-mo {
+color:#208050;
+}
+pygments-sb {
+color:#4070A0;
+}
+.pygments-sc {
+color:#4070A0;
+}
+.pygments-sd {
+color:#4070A0;
+font-style:italic;
+}
+.pygments-s2 {
+color:#4070A0;
+}
+.pygments-se {
+color:#4070A0;
+font-weight:bold;
+}
+.pygments-sh {
+color:#4070A0;
+}
+.pygments-si {
+color:#70A0D0;
+font-style:italic;
+}
+.pygments-sx {
+color:#C65D09;
+}
+.pygments-sr {
+color:#235388;
+}
+.pygments-s1 {
+color:#4070A0;
+}
+.pygments-ss {
+color:#517918;
+}
+.pygments-bp {
+color:#007020;
+}
+.pygments-vc {
+color:#BB60D5;
+}
+.pygments-vg {
+color:#BB60D5;
+}
+.pygments-vi {
+color:#BB60D5;
+}
+.pygments-il {
+color:#208050;
+}
