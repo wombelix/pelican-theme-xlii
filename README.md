@@ -6,6 +6,8 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # Pelican Theme: XLII
 
+[![REUSE status](https://api.reuse.software/badge/codeberg.org/wombelix/pelican-theme-xlii)](https://api.reuse.software/info/codeberg.org/wombelix/pelican-theme-xlii)
+
 Custom Pelican Theme, used for example at https://dominik.wombacher.cc, with some retro charm from back in the CRT terminal days.
 
 During creation, especially the following resources were very helpful, inspiring and parts re-used in this template:
