@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2023 Dominik Wombacher <dominik@wombacher.cc>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Pelican Theme: XLII
 
 Custom Pelican Theme, used for example at https://dominik.wombacher.cc, with some retro charm from back in the CRT terminal days.
