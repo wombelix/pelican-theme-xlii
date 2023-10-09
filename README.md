@@ -6,11 +6,11 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # Pelican Theme: XLII
 
-[![REUSE status](https://api.reuse.software/badge/codeberg.org/wombelix/pelican-theme-xlii)](https://api.reuse.software/info/codeberg.org/wombelix/pelican-theme-xlii)
+[![REUSE status](https://api.reuse.software/badge/git.sr.ht/~wombelix/pelican-theme-xlii)](https://api.reuse.software/info/git.sr.ht/~wombelix/pelican-theme-xlii)
 
 Custom Pelican Theme, used for example at https://dominik.wombacher.cc, with some retro charm from back in the CRT terminal days.
 
-During creation, especially the following resources were very helpful, inspiring and parts re-used in this template:
+During creation, especially the following resources were very helpful, inspiring and parts might also be used in this template:
 
 ## Theme
 
@@ -42,6 +42,23 @@ During creation, especially the following resources were very helpful, inspiring
   
   - https://wave.webaim.org
 
+# Source
+
+The primary location is: https://git.sr.ht/~wombelix/pelican-theme-xlii
+
+Mirrors of the repository are available on 
+[Codeberg](https://codeberg.org/wombelix/pelican-theme-xlii), 
+[Gitlab](https://gitlab.com/wombelix/pelican-theme-xlii) and 
+[Github](https://github.com/wombelix/pelican-theme-xlii).
+
+# Contribute
+
+Don't hesitate to provide Feedback, open an Issue or create an Pull / Merge Request.
+
+Just pick the workflow or platform you prefer and are most comfortable with.
+
+Feedback, Bug Reports or Patches via [Email](https://dominik.wombacher.cc/pages/contact.html) are also always welcome.
+
 # License
 
 Unless otherwise stated: `GNU Affero General Public License v3.0 or later`
@@ -49,3 +66,4 @@ Unless otherwise stated: `GNU Affero General Public License v3.0 or later`
 All files contain license information either as `header comment` or `corresponding .license` file.
 
 [REUSE](https://reuse.software) from the [FSFE](https://fsfe.org/) implemented to verify license and copyright compliance.
+
